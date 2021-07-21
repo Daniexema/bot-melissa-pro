@@ -18,14 +18,14 @@ public class MessageRestController {
 		private static final Logger LOG = Logger.getLogger(MessageRestController.class);	
 
 	@PostMapping(value = "/responseMsg")
-	public String testPostRequest1(@RequestParam("Body") String body, @RequestParam("From") String from) {
+	public String testPostRequest1(@RequestParam("body") String body, @RequestParam("form") String from) {
 		LOG.info("Inicia servicio...");
 		Body body2 = new Body.Builder(body).build();
 	    Message message = new Message.Builder().body(body2).build();
 
 	    MessagingResponse response = new MessagingResponse.Builder().message(message).build();
 		LOG.info("Termina servicio...");	    
-		return "Escribiste "+body;
+		return "Escribiste "+response;
 	}
 	
 	
