@@ -25,7 +25,7 @@ public class MessageRestController {
 
 	    MessagingResponse response = new MessagingResponse.Builder().message(message).build();
 		LOG.info("Termina servicio...");	    
-		return "Escribiste "+response.getTagName()+ "-->"+response.getChildren()+"-->to String "+response.toString();
+		return "Escribiste --->"+body+" --->"+from;
 	}
 	
 	
