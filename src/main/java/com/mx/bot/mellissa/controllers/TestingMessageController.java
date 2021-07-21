@@ -20,6 +20,7 @@ public class TestingMessageController {
 		names.add("KATY");
 		names.add("KAREN");
 		names.add("PERLA");
+		names.add("deploy successful");
 		
 		return names;
 	}
