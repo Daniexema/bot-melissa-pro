@@ -20,12 +20,12 @@ public class MessageRestController {
 	@PostMapping(value = "/responseMsg")
 	public String testPostRequest1(@RequestParam("Body") String body, @RequestParam("From") String from) {
 		LOG.info("Inicia servicio...");
-		Body body2 = new Body.Builder(body+from).build();
+		Body body2 = new Body.Builder(body).build();
 	    Message message = new Message.Builder().body(body2).build();
 
 	    MessagingResponse response = new MessagingResponse.Builder().message(message).build();
 		LOG.info("Termina servicio...");	    
-		return response.toXml();
+		return "Escribiste "+body;
 	}
 	
 	
