@@ -19,7 +19,7 @@ public class MessageServiceImpl implements MessageService{
 			JSONParser parser = new JSONParser();
 			JSONArray jsonArray = (JSONArray) parser.parse(reader);
 			JSONObject jsonObject = (JSONObject) jsonArray.get(0);
-			result = (String) jsonObject.get("servicios");
+			result = (String) jsonObject.get(bodyMsg);
 	        } catch (FileNotFoundException e) {
 	            e.printStackTrace();
 	        } catch (IOException e) {
